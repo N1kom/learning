@@ -1,0 +1,29 @@
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int coinCount;
+            int crystalCount;
+            int crystalPrice = 5;
+            string name;
+            
+            Console.WriteLine("Добро пожаловать в лавку чудес,путник! Скажи,как я могу к тебе обращаться?");
+            name = Console.ReadLine();
+            Console.WriteLine($"Хорошо,{name},вижу,что ты пришёл за магическими кристалами. Тебе повезло,сегодня кристалы по {crystalPrice} монет за штуку.");
+            Console.WriteLine($"Мхм...скажи {name},а какой суммой монет ты располагаешь?");
+            coinCount = Convert.ToInt32(Console.ReadLine());
+            crystalCount = coinCount / crystalPrice;
+            Console.WriteLine($"{name} на {coinCount} ты можешь купить {crystalCount} кристалов. Сколько кристалов ты желаешь приобрести?");
+            crystalCount = Convert.ToInt32(Console.ReadLine());
+            coinCount = coinCount - crystalCount * crystalPrice;
+            Console.WriteLine($"Замечательно,{name},держи свои {crystalCount} кристалов и сдачу в {coinCount} монет.");
+
+            
+            
+
+           
+        }
+    }
+}
