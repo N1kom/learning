@@ -22,7 +22,7 @@ namespace Learning
             Console.Write($"{userName},а где ты работаешь?");
             string userJob = Console.ReadLine();
 
-            Console.WriteLine($"И так,тебя зовут {userName},тебе {userAge} лет,по знаку зодиака ты {userSign} и работаешь на {userJob}.");
+            Console.WriteLine($"И так,тебя зовут {userName},тебе {userAge} лет,по знаку зодиака ты {userSign} и работаешь {userJob}.");
 
 
         }
