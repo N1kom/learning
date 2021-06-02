@@ -15,7 +15,7 @@ namespace ConsoleApp1
                 "\nПопробуй!");
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("Для начала введи фразу,которую будет попугайничать попугай,а затем то,сколько раз он будет попугайничать!");
+            Console.WriteLine("Для начала введи фразу,которую будет попугайничать попугай!");
 
             string userInput = (Console.ReadLine());
 
@@ -32,6 +32,5 @@ namespace ConsoleApp1
 
                 Console.WriteLine(userInput);
 
-                Console.ForegroundColor = ConsoleColor.White;
-
+               
             }
