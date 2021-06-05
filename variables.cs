@@ -13,7 +13,7 @@ namespace Learning
             int userHeath;
             int maxCrystalCount;
             int userArmor;
-            float SwordDamage;
+            float swordDamage;
             float userDamage;
             string userName;
             string groupName;
