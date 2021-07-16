@@ -16,7 +16,7 @@ namespace ConsoleApp2
 
             string userInput = Console.ReadLine();
 
-            int i = 1;
+            int counter = 1;
 
             switch(userInput)
             {
@@ -24,7 +24,7 @@ namespace ConsoleApp2
                     while (userInput != "exit")
                     {
 
-                        Console.WriteLine($"абракадабра {i++}.");
+                        Console.WriteLine($"абракадабра {counter++}.");
                         Console.WriteLine("Что бы выйти набери команду - exit");
 
                         userInput = Console.ReadLine();
