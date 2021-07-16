@@ -10,19 +10,13 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-           //Использовал цикл for потому что заданы чёткие условия для вывода последовательности.
+          
             for (int i = 7; i < 100;i+=7)
             {
-                
+             
                 Console.WriteLine(i);
             }
            
-
-
-
-
-
-
         }
     }
 }
