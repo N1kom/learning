@@ -22,7 +22,6 @@ namespace ConsoleApp2
             symbol = Convert.ToChar(Console.ReadLine());
 
             int lenght = name.Length+2;
-            //Console.WriteLine(lenght);
 
             for (int i = lenght; i >=1; i--) 
             { 
@@ -46,11 +45,6 @@ namespace ConsoleApp2
                 }
 
             }
-
-            // как сделать нормально я не понял,порылся в интернете но приспособить под свою задачу не получилось,
-            // буду благодарен,если пришлёте правильное решение,что бы было понятно - как правильно.
-            
-
 
         }
     }
