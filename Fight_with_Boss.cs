@@ -15,11 +15,18 @@ namespace ConsoleApp2
             float playerArmor = rand.Next(50, 85);
             float playerDamage = rand.Next(50, 80);
 
-            int bloodCurse;
+            int bloodCurse = rand.Next(10, 100);
             int bloodForce = 100;
-            
+            int bloodForceCrit = bloodForce*2;
+            int bloodStandHp = -10;
+            int bloodStandArmor = Convert.ToInt32(playerArmor * 0.2f);
+            int bloodHealCutDmg = Convert.ToInt32(playerDamage * 0.5f);
+            int bloodHeal = 30;
+
+
             float bossHealth = 1000;
             int bossDamage = rand.Next(30, 40);
+            float bossDamageCrit = bossDamage * 1.5f;
             float bossArmor = rand.Next(70, 100);
 
             int critChance = rand.Next(0, 100);
@@ -66,7 +73,7 @@ namespace ConsoleApp2
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
 
-                    damageDone = Convert.ToSingle(bossDamage * 1.5) / 100 * playerArmor;
+                    damageDone = Convert.ToSingle(bossDamageCrit) / 100 * playerArmor;
                     playerHealth -= damageDone;
 
                     Console.WriteLine($"\nКрит!!! Босс нанёс вам {damageDone} урона.");
@@ -106,7 +113,7 @@ namespace ConsoleApp2
                         if (critChance >= 70)
                         {
                             
-                            damageDone = Convert.ToSingle(bloodForce * 2) / 100 * bossArmor;
+                            damageDone = Convert.ToSingle(bloodForceCrit) / 100 * bossArmor;
                             bossHealth -= damageDone;
 
                             Console.ForegroundColor = ConsoleColor.Red;
@@ -143,8 +150,8 @@ namespace ConsoleApp2
 
                     case "Blood Stand":
 
-                        playerHealth -= 10;
-                        playerArmor -= playerArmor * 0.2f;
+                        playerHealth -= bloodStandHp;
+                        playerArmor -= bloodStandArmor;
 
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine($"\nВы приняли стойку война крови! Ваше здоровье {playerHealth},ваша броня {playerArmor} .");
@@ -173,8 +180,8 @@ namespace ConsoleApp2
 
                             if (userInput == "Blood Heal")
                             {
-                                playerDamage -= playerDamage * 0.5f;
-                                playerHealth += 30;
+                                playerDamage -= bloodHealCutDmg;
+                                playerHealth += bloodHeal;
 
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine($"\nВы использовали лечение крови! Ваш урон уменьшен и равен { playerDamage},ваше здоровье {playerHealth} .");
@@ -235,3 +242,4 @@ namespace ConsoleApp2
         }
     }
 }
+
