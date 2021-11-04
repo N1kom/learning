@@ -10,7 +10,7 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            int[,] array = new int[3, 3] { {1,5,2 }, { 7, 3, 2 }, {9,3,5} };
+            int[,] array = new int[3, 3] { { 1, 5, 2 }, { 7, 3, 2 }, { 9, 3, 5 } };
 
             Console.WriteLine(array.GetLength(0) + " - Колличество строк массива.");
             Console.WriteLine(array.GetLength(1) + " - Колличество столбцов массива.");
@@ -19,11 +19,17 @@ namespace ConsoleApp3
 
             for (int i = 0; i < array.GetLength(0); i++)
             {
-               
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    Console.Write(array[i,j] + " ");
+                    Console.Write(array[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
 
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
                     if (i == 1)
                     {
                         sum += array[i, j];
@@ -32,17 +38,15 @@ namespace ConsoleApp3
                     {
                         multiply *= array[i, j];
                     }
-                    if (i >1 && j == 0)
+                    if (i > 1 && j == 0)
                     {
                         break;
                     }
                 }
-                Console.WriteLine();
             }
-
             Console.WriteLine(sum + " - сумма элементов второй строки.");
             Console.WriteLine(multiply + " - произведение элементов первого столбца.");
-
         }
     }
 }
+
