@@ -30,7 +30,7 @@ namespace Learning
                     Console.WriteLine(localMax);
                     b += 2;
                 }
-                else if (b == array.Length-1 && array[b] > array[b - 1])
+                else if (b == array.Length - 1 && array[b] > array[b - 1])
                 {
                     localMax = array[b];
                     Console.WriteLine(localMax);
@@ -46,3 +46,4 @@ namespace Learning
         }
     }
 }
+
