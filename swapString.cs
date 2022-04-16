@@ -12,7 +12,6 @@ namespace Learning
         {
             string name = "Pupkin";
             string surname = "Vasya";
-
             (name, surname) = (surname, name);
             Console.WriteLine(surname + " " + name);
         }
